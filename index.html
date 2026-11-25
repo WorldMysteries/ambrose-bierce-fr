@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambrose Bierce — L'écrivain disparu au Mexique</title>
+    <meta
+      name="description"
+      content="Dossier d'archives interactif, chronique du parcours de 1913, lettres authentiques et cinq hypothèses historiques sur la disparition d'Ambrose Bierce au Mexique."
+    />
+    <meta property="og:title" content="Ambrose Bierce — L'écrivain disparu au Mexique" />
+    <meta
+      property="og:description"
+      content="Reconstitution archivistique du dernier voyage d'Ambrose Bierce dans un Mexique en pleine révolution (1913–1914)."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="reading-progress" aria-hidden="true">
+      <div class="reading-progress-bar" id="readingProgressBar"></div>
+    </div>
+
+    <a class="skip-link" href="#main-content">Accéder au contenu du dossier</a>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="#top" class="brand-wordmark">Archives Bierce</a>
+
+        <nav class="site-nav" aria-label="Sections du dossier">
+          <a href="#route" class="nav-link">Itinéraire</a>
+          <a href="#chronicle" class="nav-link">Chronique</a>
+          <a href="#letters" class="nav-link">Lettres</a>
+          <a href="#theories" class="nav-link">Hypothèses</a>
+          <a href="#dictionary" class="nav-link">Dictionnaire</a>
+        </nav>
+
+        <div class="header-action">
+          <button type="button" class="btn-primary" id="openLastLetterBtn">
+            Dernière lettre
+          </button>
+          <button
+            type="button"
+            class="mobile-menu-toggle"
+            id="mobileMenuToggle"
+            aria-expanded="false"
+            aria-controls="mobileDrawer"
+            aria-label="Ouvrir la navigation"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <line x1="3" y1="7" x2="21" y2="7"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="17" x2="21" y2="17"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer" hidden>
+        <nav class="mobile-nav" aria-label="Menu mobile">
+          <a href="#route" class="mobile-nav-link">Itinéraire de 1913</a>
+          <a href="#chronicle" class="mobile-nav-link">Chronique des événements</a>
+          <a href="#letters" class="mobile-nav-link">Archives épistolaires</a>
+          <a href="#theories" class="mobile-nav-link">Cinq hypothèses sur la disparition</a>
+          <a href="#dictionary" class="mobile-nav-link">Le Dictionnaire du Diable</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="top" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="editorial-kicker">
+                <span>Monographie d'archives</span>
+                <span aria-hidden="true">·</span>
+                <span>1913–1914</span>
+                <span aria-hidden="true">·</span>
+                <span>Chihuahua, Mexique</span>
+              </p>
+
+              <h1 id="hero-title" class="hero-title">
+                Ambrose Bierce : l'écrivain disparu au Mexique
+              </h1>
+
+              <p class="hero-lead">
+                À l'automne 1913, ce satiriste de soixante et onze ans, vétéran de la guerre de Sécession et auteur du « Dictionnaire du Diable », partit pour un Mexique en proie à la révolution afin de rejoindre la Division du Nord de Pancho Villa. Après une courte carte postale envoyée de Chihuahua le 26 décembre, sa trace se perdit à jamais.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#route" class="btn-primary">Explorer l'itinéraire de 1913</a>
+                <a href="#letters" class="btn-secondary">Lire les lettres du voyage</a>
+              </div>
+
+              <blockquote class="hero-epigraph">
+                <p>
+                  « Si vous apprenez qu'on m'a dressé contre un mur de pierre mexicain et réduit en haillons, sachez que je tiens cela pour une façon tout à fait digne de quitter la vie. »
+                </p>
+                <footer>D'une lettre d'Ambrose Bierce à Lora Bierce, Washington, septembre 1913</footer>
+              </blockquote>
+            </div>
+
+            <figure class="hero-media">
+              <div class="archival-frame portrait-frame">
+                <img
+                  src="src/assets/images/bierce_archival_portrait.jpg"
+                  alt="Portrait d'atelier d'archive d'Ambrose Bierce, vers 1913"
+                  referrerpolicy="no-referrer"
+                  loading="eager"
+                />
+                <div class="image-fallback" aria-hidden="true">
+                  <span>A. G. Bierce · 1842–1914 ?</span>
+                </div>
+              </div>
+              <figcaption class="figure-caption">
+                Fig. 1 — Ambrose Gwinnett Bierce peu avant son départ vers le Sud-Ouest, automne 1913. Reconstitution d'archive d'un tirage d'atelier.
+              </figcaption>
+            </figure>
+          </div>
+
+          <dl class="dossier-strip" aria-label="Données essentielles du dossier">
+            <div class="dossier-cell">
+              <dt>Date et lieu de naissance</dt>
+              <dd class="tabular">24 juin 1842 · Ohio, États-Unis</dd>
+            </div>
+            <div class="dossier-cell">
+              <dt>Âge au passage de la frontière</dt>
+              <dd class="tabular">71 ans · Vétéran de Shiloh</dd>
+            </div>
+            <div class="dossier-cell">
+              <dt>Dernière lettre authentifiée</dt>
+              <dd class="tabular">26 décembre 1913 · Chihuahua</dd>
+            </div>
+            <div class="dossier-cell">
+              <dt>Lieu probable de la disparition</dt>
+              <dd class="tabular">Ojinaga · Janvier 1914</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- SECTION 1: INTERACTIVE EXPEDITION ROUTE -->
+      <section class="section section-alt" id="route" aria-labelledby="route-heading">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-index">01. Géographie d'une disparition</p>
+            <h2 id="route-heading" class="section-title">L'itinéraire du dernier voyage</h2>
+            <p class="section-subtitle">
+              Choisissez un point de repère sur la carte ou dans la liste des étapes pour suivre le chemin de Bierce, de Washington aux combats frontaliers de l'État de Chihuahua.
+            </p>
+          </header>
+
+          <div class="route-controls" role="tablist" aria-label="Étapes de l'itinéraire de 1913–1914" id="routeTabs"></div>
+
+          <div class="route-workspace">
+            <div class="map-panel">
+              <div class="map-header">
+                <span class="map-label">Schéma topographique du parcours · Octobre 1913 — Janvier 1914</span>
+                <span class="map-coords tabular" id="mapCoordsDisplay">38.90° N, 77.03° W</span>
+              </div>
+              <svg
+                id="expeditionMap"
+                class="expedition-svg"
+                viewBox="0 0 760 440"
+                role="img"
+                aria-label="Carte interactive de l'itinéraire d'Ambrose Bierce, de Washington au nord du Mexique"
+              >
+                <defs>
+                  <pattern id="gridPattern" width="38" height="38" patternUnits="userSpaceOnUse">
+                    <path d="M 38 0 L 0 0 0 38" fill="none" stroke="#DDD5C7" stroke-width="0.7" />
+                  </pattern>
+                </defs>
+                <rect width="760" height="440" fill="#F6F2EA" />
+                <rect width="760" height="440" fill="url(#gridPattern)" />
+
+                <!-- Stylized historical geography contours (US South-East to Northern Mexico) -->
+                <path
+                  d="M 40 315 Q 140 285 215 300 T 360 325 Q 430 340 490 365 L 555 415 L 40 415 Z"
+                  fill="#ECE5D8"
+                  stroke="#CFC5B4"
+                  stroke-width="1"
+                />
+                <!-- Rio Grande border line -->
+                <path
+                  d="M 110 250 Q 210 265 290 295 T 425 320 Q 515 330 610 385"
+                  fill="none"
+                  stroke="#9C8F7E"
+                  stroke-width="1.75"
+                  stroke-dasharray="6 4"
+                />
+                <text x="155" y="242" class="map-region-text">ÉTATS-UNIS</text>
+                <text x="165" y="346" class="map-region-text">NORD DU MEXIQUE · CHIHUAHUA</text>
+                <text x="435" y="308" class="map-river-text">fleuve Rio Grande</text>
+
+                <!-- Full route track -->
+                <path
+                  d="M 650 95 L 520 140 L 445 215 L 330 235 L 255 268 L 232 328 L 282 356"
+                  fill="none"
+                  stroke="#B8AE9E"
+                  stroke-width="2"
+                  stroke-dasharray="4 4"
+                />
+                <!-- Active animated highlight track -->
+                <path
+                  id="activeRouteLine"
+                  d="M 650 95"
+                  fill="none"
+                  stroke="#9A3412"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <!-- Interactive waypoint nodes injected/bound via app.js -->
+                <g id="mapNodesLayer"></g>
+              </svg>
+            </div>
+
+            <article class="waypoint-detail" id="waypointDetail" aria-live="polite">
+              <div class="waypoint-meta-row">
+                <span class="waypoint-step tabular" id="wpIndex">Étape 01 / 06</span>
+                <span aria-hidden="true">·</span>
+                <span class="waypoint-date tabular" id="wpDate">Octobre 1913</span>
+              </div>
+              <h3 class="waypoint-title" id="wpTitle">Washington, district de Columbia</h3>
+              <p class="waypoint-summary" id="wpSummary"></p>
+
+              <figure class="waypoint-figure">
+                <div class="archival-frame landscape-frame">
+                  <img
+                    id="wpImage"
+                    src="src/assets/images/writer_desk_manuscript.jpg"
+                    alt="Illustration documentaire de l'étape de l'itinéraire"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div class="image-fallback" aria-hidden="true">
+                    <span>Planche d'archive de l'itinéraire</span>
+                  </div>
+                </div>
+                <figcaption class="figure-caption" id="wpCaption"></figcaption>
+              </figure>
+
+              <div class="waypoint-citation">
+                <p class="citation-label">Témoignage documentaire</p>
+                <p class="citation-text" id="wpQuote"></p>
+              </div>
+
+              <div class="waypoint-nav-buttons">
+                <button type="button" class="btn-secondary" id="prevWaypointBtn">
+                  ← Étape précédente
+                </button>
+                <button type="button" class="btn-secondary" id="nextWaypointBtn">
+                  Étape suivante →
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: CHRONICLE & MARGIN NOTES -->
+      <section class="section" id="chronicle" aria-labelledby="chronicle-heading">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-index">02. Bande documentaire</p>
+            <h2 id="chronicle-heading" class="section-title">Chronique des derniers mois</h2>
+            <p class="section-subtitle">
+              Du dîner entre amis à Washington jusqu'au dépêche de décembre depuis Chihuahua et à l'assaut de janvier contre Ojinaga.
+            </p>
+          </header>
+
+          <div class="filter-toolbar" role="group" aria-label="Filtre des entrées de la chronique" id="chronicleFilters">
+            <button type="button" class="filter-btn is-active" data-filter="all">Tous les événements</button>
+            <button type="button" class="filter-btn" data-filter="letters">Lettres et presse</button>
+            <button type="button" class="filter-btn" data-filter="military">Épisodes militaires</button>
+            <button type="button" class="filter-btn" data-filter="testimony">Témoignages</button>
+          </div>
+
+          <div class="editorial-split">
+            <div class="editorial-main">
+              <p class="opening-prose">
+                En quittant Washington en octobre 1913, Ambrose Bierce régla méthodiquement ses affaires terrestres : il acheva la publication de ses œuvres complètes en douze volumes, confia ses archives à sa secrétaire Carrie Christiansen et fit parvenir des lettres d'adieu à ses proches. Sa décision ne fut nullement un soudain caprice — cet écrivain vieillissant, miné par un asthme sévère, recherchait consciemment la rencontre avec l'histoire sur la ligne de front de la révolution mexicaine.
+              </p>
+
+              <ol class="chronicle-list" id="chronicleList"></ol>
+            </div>
+
+            <aside class="editorial-margin" aria-label="Notes marginales d'archive">
+              <div class="margin-block">
+                <p class="margin-heading">Équipement personnel de 1913</p>
+                <p class="margin-text">
+                  D'après les souvenirs des correspondants à El Paso, Bierce voyageait léger : une sacoche de route usée, des imprimés pour ses notes, une montre à gousset en argent, un revolver Colt et une lettre de recommandation à l'intention de l'état-major de la Division du Nord.
+                </p>
+              </div>
+
+              <figure class="margin-figure">
+                <div class="archival-frame landscape-frame">
+                  <img
+                    src="src/assets/images/revolution_train_el_paso.jpg"
+                    alt="Train de l'époque de la révolution mexicaine à la frontière, dans la région d'El Paso"
+                    referrerpolicy="no-referrer"
+                    loading="lazy"
+                  />
+                  <div class="image-fallback" aria-hidden="true">
+                    <span>Convoi militaire · 1913</span>
+                  </div>
+                </div>
+                <figcaption class="figure-caption">
+                  Fig. 2 — La ligne ferroviaire frontalière longeant le Rio Grande, empruntée par les troupes de Pancho Villa durant l'hiver 1913.
+                </figcaption>
+              </figure>
+
+              <div class="margin-block">
+                <p class="margin-heading">Les témoins qui restèrent en vie</p>
+                <p class="margin-text">
+                  Le consul américain à Chihuahua Lewis Waller, le colonel J. P. Deck et le photographe Harry Tracy consignèrent les mouvements des étrangers dans la zone des combats ; toutefois, aucun rapport officiel sur la mort de Bierce ne fut jamais établi.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: EPISTOLARY ARCHIVE -->
+      <section class="section section-alt" id="letters" aria-labelledby="letters-heading">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-index">03. Héritage épistolaire</p>
+            <h2 id="letters-heading" class="section-title">Dernières lettres sur la route du Mexique</h2>
+            <p class="section-subtitle">
+              Textes authentiques envoyés par Bierce d'octobre à décembre 1913. Changez de langue pour confronter la traduction française au style anglais original de l'auteur.
+            </p>
+          </header>
+
+          <div class="letters-layout">
+            <div class="letters-sidebar" role="tablist" aria-label="Choix d'une lettre d'archive" id="letterList"></div>
+
+            <article class="letter-viewer" id="letterViewer" aria-live="polite">
+              <div class="letter-viewer-header">
+                <div>
+                  <p class="letter-accession tabular" id="letterAccession">DOC. 1913.12.26</p>
+                  <h3 class="letter-title" id="letterTitle">Lettre à Blanche Partington</h3>
+                  <p class="letter-recipient" id="letterMeta">Chihuahua, Mexique · 26 décembre 1913</p>
+                </div>
+
+                <div class="lang-switch" role="group" aria-label="Langue du texte de la lettre">
+                  <button type="button" class="lang-btn is-active" data-lang="ru" id="btnLangRu">
+                    Traduction
+                  </button>
+                  <button type="button" class="lang-btn" data-lang="en" id="btnLangEn">
+                    Original (EN)
+                  </button>
+                </div>
+              </div>
+
+              <div class="letter-body" id="letterBody"></div>
+
+              <div class="letter-provenance">
+                <p class="provenance-title">Note d'archive</p>
+                <p class="provenance-text" id="letterProvenance"></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: FIVE THEORIES OF DISAPPEARANCE -->
+      <section class="section" id="theories" aria-labelledby="theories-heading">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-index">04. Enquête historique</p>
+            <h2 id="theories-heading" class="section-title">Cinq hypothèses sur la disparition</h2>
+            <p class="section-subtitle">
+              En plus d'un siècle, historiens, biographes et écrivains ont avancé des dizaines d'explications sur le sort de Bierce. Sont réunies ci-dessous cinq hypothèses principales, avec une évaluation de leur base documentaire.
+            </p>
+          </header>
+
+          <div class="theories-grid" id="theoriesGrid"></div>
+
+          <div class="theory-inspector" id="theoryInspector" aria-live="polite">
+            <div class="inspector-header">
+              <div>
+                <p class="inspector-kicker" id="tiKicker">Version 01 · Probabilité élevée</p>
+                <h3 class="inspector-title" id="tiTitle"></h3>
+              </div>
+              <span class="verdict-label" id="tiVerdict"></span>
+            </div>
+            <p class="inspector-body" id="tiDescription"></p>
+            <div class="inspector-columns">
+              <div class="inspector-col">
+                <h4>Arguments en faveur de l'hypothèse</h4>
+                <ul id="tiPros"></ul>
+              </div>
+              <div class="inspector-col">
+                <h4>Contradictions et zones d'ombre</h4>
+                <ul id="tiCons"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: THE DEVIL'S DICTIONARY & BIBLIOGRAPHY -->
+      <section class="section section-alt" id="dictionary" aria-labelledby="dictionary-heading">
+        <div class="container">
+          <div class="legacy-grid">
+            <div class="dictionary-box">
+              <p class="section-index">05. « Le Dictionnaire du Diable »</p>
+              <h2 id="dictionary-heading" class="section-title">La voix du satiriste</h2>
+              <p class="dictionary-intro">
+                Les définitions ironiques de Bierce ont anticipé son propre départ. Cliquez sur le bouton ci-dessous pour changer d'entrée préférée du dictionnaire.
+              </p>
+
+              <div class="aphorism-card" aria-live="polite">
+                <p class="aphorism-term" id="aphorismTerm">HISTOIRE, n.</p>
+                <p class="aphorism-def" id="aphorismDef">
+                  Récit pour l'essentiel faux d'événements pour l'essentiel insignifiants, provoqués par des souverains pour l'essentiel filous et des soldats pour l'essentiel sots.
+                </p>
+                <p class="aphorism-original" id="aphorismOrig">
+                  HISTORY, n. An account mostly false, of events mostly unimportant, which are brought about by rulers mostly knaves, and soldiers mostly fools.
+                </p>
+              </div>
+
+              <div class="aphorism-actions">
+                <button type="button" class="btn-primary" id="nextAphorismBtn">
+                  Définition suivante
+                </button>
+                <span class="aphorism-counter tabular" id="aphorismCounter">Entrée 1 sur 6</span>
+              </div>
+            </div>
+
+            <div class="bibliography-box">
+              <p class="section-index">Sources et bibliographie</p>
+              <h3 class="bib-heading">Que lire sur Bierce et sa disparition</h3>
+
+              <dl class="bib-list">
+                <div class="bib-item">
+                  <dt>Ambrose Bierce — « Une aventure sur le pont d'Owl Creek » (1890)</dt>
+                  <dd>La nouvelle militaire classique sur la frontière entre réalité et songe d'agonie.</dd>
+                </div>
+                <div class="bib-item">
+                  <dt>Ambrose Bierce — « Le Dictionnaire du Diable » (1911)</dt>
+                  <dd>Recueil de définitions satiriques et mordantes, patiemment élaboré par l'écrivain pendant trente ans.</dd>
+                </div>
+                <div class="bib-item">
+                  <dt>Carlos Fuentes — « Le Vieux Gringo » (Gringo Viejo, 1985)</dt>
+                  <dd>Reconstitution romanesque des derniers jours de Bierce dans l'armée de Pancho Villa.</dd>
+                </div>
+                <div class="bib-item">
+                  <dt>Roy Morris Jr. — « Ambrose Bierce: Alone in Bad Company » (1995)</dt>
+                  <dd>L'une des biographies documentaires les plus faisant autorité, avec une analyse des archives de Chihuahua.</dd>
+                </div>
+                <div class="bib-item">
+                  <dt>S. T. Joshi &amp; David E. Schultz — « A Much Misunderstood Man » (2003)</dt>
+                  <dd>Recueil complet de la correspondance choisie de Bierce, y compris les lettres de la fin de 1913.</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <p class="footer-title">Archives Ambrose Bierce</p>
+          <p class="footer-note">
+            Exposition historique et littéraire consacrée au dernier voyage de l'écrivain américain au Mexique (1913–1914).
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#route">Itinéraire</a>
+          <a href="#chronicle">Chronique</a>
+          <a href="#letters">Lettres</a>
+          <a href="#theories">Hypothèses</a>
+          <a href="#top">Haut de page</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ARCHIVAL MODAL FOR QUICK ACCESS TO LAST LETTER -->
+    <div class="modal-backdrop" id="letterModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div>
+            <p class="editorial-kicker">Pièce d'archive · 26 décembre 1913</p>
+            <h2 id="modalTitle" class="modal-title">La dernière lettre de Chihuahua</h2>
+          </div>
+          <button type="button" class="modal-close" id="closeModalBtn" aria-label="Fermer la fenêtre">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-quote">
+            « Ici tout est encore calme, et demain nous partons pour Ojinaga. Quant à moi, je m'en vais demain dans une direction inconnue. »
+          </p>
+          <p class="modal-context">
+            Ces lignes de la lettre à Blanche Partington, envoyée de Chihuahua le 26 décembre 1913, sont les derniers mots authentiquement attestés d'Ambrose Bierce. Deux semaines plus tard, les troupes de Pancho Villa prirent Ojinaga — et la trace de l'écrivain se perdit dans la poussière du désert.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" id="modalGoToLettersBtn">
+            Ouvrir la collection complète des lettres
+          </button>
+          <button type="button" class="btn-primary" id="modalCloseConfirmBtn">Fermer</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
